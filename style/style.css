@@ -62,6 +62,8 @@ button {
 /* --------------Header---------- */
 .header {
   border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -96,16 +98,33 @@ button {
 }
 
 .header-list-item {
-  padding: 24px 0;
 }
 
 .header-nav-link {
   color: var(--NAVY-BLUE, #2e2f42);
   font-family: Roboto;
+  display: block;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 24px 0;
+}
+.first-link {
+  position: relative;
+  color: #404bbf;
+}
+
+.first-link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+  width: 100%;
 }
 
 .header-nav-link:hover,
@@ -133,6 +152,7 @@ button {
   font-weight: 400;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-link:hover,
@@ -144,8 +164,18 @@ button {
 /* -----------Hero----------- */
 
 .hero {
+  max-width: 1440px;
   padding: 188px 0;
   background-color: var(--NAVY-BLUE, #2e2f42);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(/images/Portfolio/Hero/Hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
 }
 
 .hero-title {
@@ -177,6 +207,7 @@ button {
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btn:hover,
@@ -192,6 +223,18 @@ button {
 }
 
 .about-title {
+}
+
+.container-2-svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  /* padding: 24px 100px; */
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  background-color: #f4f4fd;
+  margin-bottom: 8px;
 }
 
 .about-list {
@@ -246,9 +289,8 @@ button {
 .team-item {
   width: calc((100% - 3 * 24px) / 4);
   border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
-    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
-    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .text-container {
@@ -275,6 +317,14 @@ button {
   font-weight: 400;
   line-height: 1.5; /* 150% */
   letter-spacing: 0.02em;
+}
+
+.soc-list {
+  display: flex;
+}
+.soc-item {
+}
+.soc-svg {
 }
 
 /* -------------------------- */
